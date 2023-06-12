@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "DTFoundation",
     platforms: [
-        .iOS(.v9),         //.v8 - .v13
+        .iOS(.v12),         //.v8 - .v13
         .macOS(.v10_10),    //.v10_10 - .v10_15
         .tvOS(.v9),        //.v9 - .v13
     ],
@@ -25,8 +25,6 @@ let package = Package(
             cSettings: [
                 .headerSearchPath("include/DTFoundation"),
                 .headerSearchPath("Source/Externals/minizip"),
-                .define("BITCODE_GENERATION_MODE", to: "bitcode"),
-                .define("ENABLE_BITCODE", to: "YES")
             ]
         ),
         .testTarget(

@@ -8,21 +8,21 @@ Pod::Spec.new do |spec|
   spec.social_media_url = 'https://twitter.com/cocoanetics'
   spec.source       = { :git => "https://github.com/Cocoanetics/DTFoundation.git", :tag => spec.version.to_s }
   
-  spec.ios.deployment_target = '9.0'
+  spec.ios.deployment_target = '12.0'
   spec.tvos.deployment_target = '9.0'
   spec.osx.deployment_target = '10.8'
   spec.license      = 'BSD'
   spec.requires_arc = true
   
   spec.subspec 'Core' do |ss|
-    ss.ios.deployment_target = '4.3'
+    ss.ios.deployment_target = '12.0'
     ss.tvos.deployment_target = '9.0'
     ss.osx.deployment_target = '10.8'
     ss.source_files = 'Core/Source/*.{h,m}'
   end
 
   spec.subspec 'UIKit' do |ss|
-    ss.ios.deployment_target = '4.3'
+    ss.ios.deployment_target = '12.0'
     ss.tvos.deployment_target = '9.0'
     ss.dependency 'DTFoundation/Core'
     ss.frameworks = 'QuartzCore'
@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'UIKit_BlocksAdditions' do |ss|
-    ss.platform = :ios, '4.3'
+    ss.platform = :ios, '12.0'
     ss.dependency 'DTFoundation/Core'
     ss.ios.source_files = 'Core/Source/iOS/BlocksAdditions/*.{h,m}'
   end
@@ -43,21 +43,21 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'DTAnimatedGIF' do |ss|
-    ss.ios.deployment_target = '4.3'
+    ss.ios.deployment_target = '12.0'
     ss.tvos.deployment_target = '9.0'
     ss.frameworks = 'ImageIO'
     ss.source_files = 'Core/Source/iOS/DTAnimatedGIF/*.{h,m}'
   end
 
   spec.subspec 'DTAWS' do |ss|
-    ss.ios.deployment_target = '4.3'
+    ss.ios.deployment_target = '12.0'
     ss.osx.deployment_target = '10.8'
     ss.dependency 'DTFoundation/Core'
     ss.source_files = 'Core/Source/DTAWS/*.{h,m}'
   end
 
   spec.subspec 'DTASN1' do |ss|
-    ss.ios.deployment_target = '4.3'
+    ss.ios.deployment_target = '12.0'
     ss.tvos.deployment_target = '9.0'
     ss.osx.deployment_target = '10.8'
     ss.dependency 'DTFoundation/Core'
@@ -65,7 +65,7 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'DTHTMLParser' do |ss|
-    ss.ios.deployment_target = '4.3'
+    ss.ios.deployment_target = '12.0'
     ss.tvos.deployment_target = '9.0'
     ss.osx.deployment_target = '10.8'
     ss.dependency 'DTFoundation/Core'
@@ -75,7 +75,7 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'DTReachability' do |ss|
-    ss.ios.deployment_target = '4.3'
+    ss.ios.deployment_target = '12.0'
     ss.osx.deployment_target = '10.8'
     ss.framework = 'SystemConfiguration'
     ss.source_files = 'Core/Source/DTReachability/*.{h,m}'
@@ -83,14 +83,14 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'DTSidePanel' do |ss|
-    ss.platform = :ios, '6.0'
+    ss.platform = :ios, '12.0'
     ss.dependency 'DTFoundation/UIKit'
     ss.ios.frameworks = 'QuartzCore'
     ss.ios.source_files = 'Core/Source/iOS/DTSidePanel/*.{h,m}'
   end
 
   spec.subspec 'DTSQLite' do |ss|
-    ss.ios.deployment_target = '4.3'
+    ss.ios.deployment_target = '12.0'
     ss.osx.deployment_target = '10.8'
     ss.library = 'sqlite3'
     ss.source_files = 'Core/Source/DTSQLite/*.{h,m}'
@@ -99,14 +99,14 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'DTUTI' do |ss|
-    ss.ios.deployment_target = '4.3'
+    ss.ios.deployment_target = '12.0'
     ss.osx.deployment_target = '10.8'
     ss.ios.frameworks = ['MobileCoreServices']
     ss.source_files = 'Core/Source/DTUTI/*.{h,m}'
   end
 
   spec.subspec 'DTZipArchive' do |ss|
-    ss.ios.deployment_target = '4.3'
+    ss.ios.deployment_target = '12.0'
     ss.source_files = 'Core/Source/DTZipArchive/*.{h,m}'
     ss.library = 'z'
 
@@ -119,7 +119,7 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'DTProgressHUD' do |ss|
-    ss.platform = :ios, '6.0'
+    ss.platform = :ios, '12.0'
     ss.dependency 'DTFoundation/UIKit'
 	  ss.dependency 'DTFoundation/Core'
     ss.ios.frameworks = 'QuartzCore'
@@ -128,28 +128,28 @@ Pod::Spec.new do |spec|
 
 
   spec.subspec 'DTScripting' do |ss|
-    ss.ios.deployment_target = '4.3'
+    ss.ios.deployment_target = '12.0'
     ss.osx.deployment_target = '10.8'
     ss.dependency 'DTFoundation/Core'
     ss.source_files = 'Core/Source/DTScripting/*.{h,m}'
   end
   
   spec.subspec 'DTAsyncFileDeleter' do |ss|
-    ss.ios.deployment_target = '4.3'
+    ss.ios.deployment_target = '12.0'
     ss.osx.deployment_target = '10.8'
     ss.dependency 'DTFoundation/Core'
     ss.source_files = 'Core/Source/DTAsyncFileDeleter/*.{h,m}'
   end
 
   spec.subspec 'Debug' do |ss|
-    ss.platform = :ios, '4.3'
+    ss.platform = :ios, '12.0'
     ss.dependency 'DTFoundation/Runtime'
     ss.dependency 'DTFoundation/Core'
     ss.source_files = 'Core/Source/iOS/Debug/*.{h,m}'
   end
 
   spec.subspec 'Runtime' do |ss|
-    ss.ios.deployment_target = '4.3'
+    ss.ios.deployment_target = '12.0'
     ss.osx.deployment_target = '10.8'
     ss.source_files = 'Core/Source/Runtime/*.{h,m}'
   end
